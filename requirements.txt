@@ -1,0 +1,6 @@
+Django
+pillow
+django-browser-reload
+django-cleanup
+django-allauth
+django-htmx
