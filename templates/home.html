@@ -1,7 +1,13 @@
 {% extends 'layouts/blank.html' %}
 
 {% block content %}
-    <div class="max-w-4xl mx-auto px-8 py-24">
+    <div class="flex justify-center flex-col text-center max-w-4xl mx-auto px-8 py-24">
         <h1>New Base Project</h1>
+        <h1>Template de Blog</h1>
+        <ul>
+            <li> 
+                <a href="{% url 'a_home:blog' %}"><span>Premier theme de Blog (WIP)</span></a>
+            </li>
+        </ul>
     </div>
 {% endblock %}

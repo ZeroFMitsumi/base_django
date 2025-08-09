@@ -5,4 +5,5 @@ app_name = 'a_home'
 
 urlpatterns = [
     path('', home_view, name='home'),
+    path('template/', blog_template_view, name='blog'),
 ]

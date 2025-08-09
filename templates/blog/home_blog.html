@@ -1,0 +1,16 @@
+{% extends 'blog/layouts/blank.html' %}
+
+{% block content %}
+    {% include "blog/_partials/hero.html" %}
+    {% include "blog/_partials/article_card_grid.html" %}
+{% endblock %}
+
+{% block script %}
+<!-- JavaScript -->
+  <script>
+    function greetUser() {
+      alert("Hello! Thanks for visiting 😊");
+      console.log("Sudip says hello from the hero section!");
+    }
+  </script>
+{% endblock script %}
