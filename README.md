@@ -1,14 +1,40 @@
 # Base de project Django
 
 ### ***Credit*** :
-- [Andreas Jud](https://github.com/andyjud)
+- Video Tutorial du project d'origine par [Andreas Jud](https://github.com/andyjud) :
+    > https://youtu.be/SQ4A7Q6_md8
 
 ## ***Description*** :
 
 - Base de project Django prêt à utiliser
+- Remplacement de `send_email_confirmation()` par 
+```python
+    from allauth.account.models import EmailAddress
+
+    from allauth.account.internal.flows.email_verification import (
+        send_verification_email_to_address,
+    )
+
+    ...
+
+    email_address = EmailAddress.objects.get_primary(request.user)
+    send_verification_email_to_address(request, email_address)
+```
 
 ## ***Installation*** :
+Pensez a créer un dossier `media` a la racine du project pour les images d'avatars et autres fichiers medias
+
 Create Virtual Environment
+### ArchLinux
+
+``` python
+    sudo pacman -S python-virtualenv
+
+    # Dans le dossier du project
+    virtualenv [nom_du_virtualenv]
+
+    source venv/bin/activate
+```
 ### Mac/Linux
 
 ``` python
